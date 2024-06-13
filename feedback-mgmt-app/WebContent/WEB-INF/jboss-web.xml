@@ -1,0 +1,3 @@
+<jboss-web>
+   <context-root>feedback-mgmt-app</context-root>
+</jboss-web>

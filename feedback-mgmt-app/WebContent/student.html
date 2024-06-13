@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/student.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+
+    <div class="loading-wrapper" id="mainLoader">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div class="splash active">
+        <div class="splash-icon"></div>
+    </div>
+
+    <div class="loading-wrapper" id="mainLoader">
+        <div class="spinner-border text-primary me-2 spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-primary text-white d-flex align-items-center justify-content-center min-vh-100">
+        <div class="card w-75">
+            <div class="card-body">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+                    <a class="navbar-brand" href="#"><i class="ri-user-star-fill"></i></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                            <!-- Add Logout Button -->
+                            <li class="nav-item"><a class="nav-link" href="#" id="logOut">Logout</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h1 class="display-4">Welcome to Student</h1>
+                        <div class="form-group mt-4">
+                            <label for="course">
+                                <h3>Course</h3>
+                            </label>
+                            <select class="form-control" id="course">
+                                <option value="Java">JAVA</option>
+                                <option value="C++">C++</option>
+                                <option value="C">C</option>
+                                <option value="Python">PYTHON</option>
+                            </select>
+                        </div>
+                        <div id="btnstar" class="d-flex align-items-center my-4">
+                            <button class="btn btn-warning mx-1" id="btn1" value="1">
+                                <i class="ri-star-fill"></i>
+                            </button>
+                            <button class="btn btn-warning mx-1" id="btn2" value="2">
+                                <i class="ri-star-fill"></i>
+                            </button>
+                            <button class="btn btn-warning mx-1" id="btn3" value="3">
+                                <i class="ri-star-fill"></i>
+                            </button>
+                            <button class="btn btn-warning mx-1" id="btn4" value="4">
+                                <i class="ri-star-fill"></i>
+                            </button>
+                            <button class="btn btn-warning mx-1" id="btn5" value="5">
+                                <i class="ri-star-fill"></i>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label for="w3review">Review or Feedback</label>
+                            <textarea class="form-control" id="review" name="w3review" rows="4"
+                                placeholder="Enter your comment here..."></textarea>
+                        </div>
+                        <button class="btn btn-dark" id="saveFeedback">Save</button>
+                    </div>
+                    <div class="col-md-6 d-none d-md-block">
+                        <img src="https://www.shutterstock.com/shutterstock/photos/1917276488/display_1500/stock-vector-various-online-survey-and-rating-icons-characters-filling-survey-form-putting-check-marks-on-1917276488.jpg"
+                            class="img-fluid rounded" alt="Responsive image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="assets/js/perfect-scrollbar.jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+    <script type="text/javascript" language="javascript">
+        var versionUpdate = (new Date()).getTime();
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "assets/js/script.js?v=" + versionUpdate;
+
+        document.body.appendChild(script);
+    </script>
+</body>
+
+</html>

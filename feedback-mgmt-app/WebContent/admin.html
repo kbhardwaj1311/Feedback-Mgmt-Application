@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/student.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- Add Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        .card-header-text {
+            color: #fff; /* Change card header text color */
+        }
+
+        #feedbackTbl th {
+            color: #000; /* Adjust table header text color */
+        }
+
+        #feedbackTbl td {
+            color: #333; /* Adjust table data text color */
+        }
+
+        /* Adjust table style to match the theme */
+        #feedbackTbl {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+
+        #feedbackTbl thead th,
+        #feedbackTbl tbody td {
+            border: none;
+        }
+
+        #feedbackTbl tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        #feedbackTbl tbody td {
+            border-top: 1px solid #dee2e6;
+        }
+
+        #feedbackTbl tbody td:last-child {
+            border-right: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loading-wrapper" id="mainLoader">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div class="splash active">
+        <div class="splash-icon"></div>
+    </div>
+
+    <div class="container-fluid bg-primary text-white d-flex align-items-center justify-content-center min-vh-100">
+        <div class="card w-75">
+            <div class="card-body">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+                    <a class="navbar-brand" href="#"><i class="ri-user-star-fill"></i></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                            <!-- Add Logout Button -->
+                            <li class="nav-item"><a class="nav-link" href="#" id="logOut">Logout</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <!-- Admin Content -->
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="card" id="adminSection">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="card-header-text">Feedback Details</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row form-group">
+                                    <div class="col-2">
+                                        <label>Language</label>
+                                        <select class="form-control select2" id="lang" style="width: 100%;">
+                                            <option value="" selected>Select...</option>
+                                            <option value="Java">Java</option>
+                                            <option value="Python">Python</option>
+                                            <option value="C">C</option>
+                                            <option value="C++">C++</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label class="display-block">&nbsp;</label>
+                                        <button class="btn btn-sm btn-outline-primary noprint mt-1" id="search">
+                                            <i class="fa fa-search mr-1" aria-hidden="true"></i> Search
+                                        </button>
+                                        &nbsp;
+                                        <button class="btn btn-sm btn-outline-primary noprint mt-1" id="clear">
+                                            <i class="fa fa-eraser mr-1" aria-hidden="true"></i> Clear
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="table-responsive results-wrapper" id='tableHead2'>
+                                    <table class="table table-striped " id="feedbackTbl">
+                                        <thead>
+                                            <tr>
+                                                <th>S No.</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Language</th>
+                                                <th>Rating</th>
+                                                <th>Comment</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="feedbackTblTBody" style="color: black;">
+                                            <!-- <tr>
+                                                <td>1.</td>
+                                                <td>Kundan</td>
+                                                <td>Kundan@123gamil.com</td>
+                                                <td>Java</td>
+                                                <td>4</td>
+                                                <td>Please improve</td>
+                                                <td><i class="fa fa-trash text-danger" aria-hidden="true"></i></td>
+                                            </tr> -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Admin Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="assets/js/perfect-scrollbar.jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+    <script type="text/javascript" language="javascript">
+        var versionUpdate = (new Date()).getTime();
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "assets/js/script.js?v=" + versionUpdate;
+        document.body.appendChild(script);
+    </script>
+</body>
+
+</html>

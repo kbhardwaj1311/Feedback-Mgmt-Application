@@ -1,0 +1,61 @@
+body, html {
+	height: 100%;
+}
+
+.bg-primary {
+	background-color: #535ef8 !important;
+}
+
+.card {
+	border-radius: 1rem;
+}
+
+.navbar-brand i {
+	font-size: 1.5rem;
+	color: #535ef8;
+}
+
+.navbar-nav .nav-link {
+	color: #474343 !important;
+}
+
+.display-4 {
+	font-weight: 400;
+	font-family: sans-serif;
+}
+
+#course {
+	width: 100%;
+}
+
+#btnstar .btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+}
+
+#save {
+	width: 100px;
+	height: 40px;
+}
+
+ .highlighted {
+	background-color: gold;
+}
+
+.btn.highlighted {
+	color: gold;
+}
+
+.btn.btn-warning {
+	background-color: white;
+	border-color: #ffc107;
+}
+
+/* .btn.btn-warning i {
+	color: #ffc107;
+}  */
